@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<title></title>
+
+<script src="http://www.w3schools.com/appml/2.0.3/appml.js"></script>
+
+<body>
+
+<table appml-data="search.php" border="1px">
+<tr appml-repeat="AMNProduct">
+
+
+
+	<td>{{Product}}</td>
+
+	<td>{{Productid}}</td>
+
+	
+
+</table>
+
+</body>
+
+</html>
