@@ -1,0 +1,25 @@
+<?php
+
+$db=new PDO('mysql:host=localhost;dbname=db1','root','student');
+
+$statement =$db->prepare("SELECT * FROM AMNProduct");
+
+$statement->execute();
+
+$numOfRow =$statement->rowCount();
+
+if ($numOfRow>0){
+
+	$rows = $statement->fetchAll();
+
+	echo '{"AMNProduct":'.json_encode($rows).'}';}
+
+else{
+
+	echo 'No records found.';
+
+	}
+
+	$dbh = null;
+
+?>
